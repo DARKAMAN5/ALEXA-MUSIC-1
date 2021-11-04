@@ -49,6 +49,11 @@
             "required": false,
             "value": "https://telegra.ph/file/20147c4f049e2c1f2f248.png"
         },
+        "ALIVE_IMG": {
+            "description": "fill with your costum background image link",
+            "required": false,
+            "value": "https://telegra.ph/file/20147c4f049e2c1f2f248.png"
+        },
         "OWNER_NAME": {
             "description": "fill with your username without @",
             "required": false,
