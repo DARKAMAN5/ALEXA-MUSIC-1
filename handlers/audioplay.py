@@ -42,10 +42,10 @@ async def stream(_, message: Message):
 
     audio = message.reply_to_message.audio if message.reply_to_message else None
     if not audio:
-        return await lel.edit("💭 **『𝙿𝙻𝙴𝙰𝚂𝙴 𝚁𝙴𝙿𝙻𝚈 𝚃𝙾 𝙰 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼 𝙰𝚄𝙳𝙸𝙾 𝙵𝙸𝙻𝙴』**")
+        return await lel.edit("**『𝙿𝙻𝙴𝙰𝚂𝙴 𝚁𝙴𝙿𝙻𝚈 𝚃𝙾 𝙰 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼 𝙰𝚄𝙳𝙸𝙾 𝙵𝙸𝙻𝙴』**")
     if round(audio.duration / 60) > DURATION_LIMIT:
         return await lel.edit(
-            f"❌ **『𝙼𝚄𝚂𝙸𝙲 𝚆𝙸𝚃𝙷 𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 𝙼𝙾𝚁𝙴 𝚃𝙷𝙰𝙽** `{DURATION_LIMIT}` **𝙼𝙸𝙽𝚄𝚃𝙴𝚂, 𝙲𝙰𝙽'𝚃 𝙿𝙻𝙰𝚈』 !**"
+            f"**『𝙼𝚄𝚂𝙸𝙲 𝚆𝙸𝚃𝙷 𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 𝙼𝙾𝚁𝙴 𝚃𝙷𝙰𝙽** `{DURATION_LIMIT}` **𝙼𝙸𝙽𝚄𝚃𝙴𝚂, 𝙲𝙰𝙽'𝚃 𝙿𝙻𝙰𝚈』 !**"
         )
 
     # tede_ganteng = True
@@ -62,15 +62,15 @@ async def stream(_, message: Message):
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
             photo=f"{QUE_IMG}",
-            caption=f"💡 **𝚃𝚁𝙰𝙲𝙺 𝙰𝙳𝙳𝙴𝙳 𝚃𝙾 𝚀𝚄𝙴𝚄𝙴 »** `{position}`\n\n🏷 **𝙽𝙰𝙼𝙴:** {title[:50]}\n⏱ **𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽:** `{duration}`\n🎧 **𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈:** {costumer}",
+            caption=f"**『 𝚃𝚁𝙰𝙲𝙺 𝙰𝙳𝙳𝙴𝙳 𝚃𝙾 𝚀𝚄𝙴𝚄𝙴 』»** `{position}`\n\n **『 𝙽𝙰𝙼𝙴 』:** {title[:50]}\n **『 𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽』:** `{duration}`\n **『 𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈 』:** {costumer}",
             reply_markup=keyboard,
         )
     else:
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
         await message.reply_photo(
             photo=f"{AUD_IMG}",
-            caption=f"🏷 **𝙽𝙰𝙼𝙴:** {title[:50]}\n⏱ **𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽:** `{duration}`\n💡 **𝚂𝚃𝙰𝚃𝚄𝚂:** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n"
-            + f"🎧 **𝚁𝙴𝚀𝚄𝙴𝚂𝚃𝙴𝙳 𝙱𝚈:** {costumer}",
+            caption=f" **『 𝙽𝙰𝙼𝙴 』:** {title[:50]}\n **『 𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 』:** `{duration}`\n **『 𝚂𝚃𝙰𝚃𝚄𝚂 』:** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n"
+            + f"**『 𝚁𝙴𝚀𝚄𝙴𝚂𝚃𝙴𝙳 𝙱𝚈 』:** {costumer}",
             reply_markup=keyboard,
         )
 
