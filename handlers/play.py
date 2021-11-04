@@ -317,7 +317,7 @@ async def m_cb(b, cb):
                     "『 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 』", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ],
-            [InlineKeyboardButton("『 𝙱𝙰𝙲𝙺 』", callback_data="menu")],
+            [InlineKeyboardButton("『 𝙼𝙴𝙽𝚄 』", callback_data="menu")],
         ]
     )
 
@@ -568,7 +568,7 @@ async def play(_, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "『 𝙲𝙻𝙾𝚂𝙴 』", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "『 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 』", url=f"https://t.me/{UPDATES_CHANNEL}"
                     )
                 ],
             ]
@@ -727,7 +727,7 @@ async def play(_, message: Message):
         await lel.delete()
         await message.reply_photo(
             photo="final.png",
-            caption=f"**『 𝚃𝚁𝙰𝙲𝙺 𝙰𝙳𝙳𝙴𝙳 𝚃𝙾 𝚀𝚄𝙴𝚄𝙴 』 »** `{position}`\n\n **『 𝙽𝙰𝙼𝙴 』** [{title[:35]}...]({url})\n **『 𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 』** `{duration}`\n **『 𝚁𝙴𝚀𝚄𝙴𝚂𝚃𝙴𝙳 𝙱𝚈 』:** {message.from_user.mention}",
+            caption=f"**『 𝚃𝚁𝙰𝙲𝙺 𝙰𝙳𝙳𝙴𝙳 𝚃𝙾 𝚀𝚄𝙴𝚄𝙴 』 »** `{position}`\n\n **『 𝙽𝙰𝙼𝙴 』➮** [{title[:35]}...]({url})\n **『 𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 』➮** `{duration}`\n **『 𝚁𝙴𝚀𝚄𝙴𝚂𝚃𝙴𝙳 𝙱𝚈 』➮** {message.from_user.mention}",
             reply_markup=keyboard,
         )
     else:
@@ -755,8 +755,8 @@ async def play(_, message: Message):
         await lel.delete()
         await message.reply_photo(
             photo="final.png",
-            caption=f"**『 𝙽𝙰𝙼𝙴 』** [{title[:65]}]({url})\n **『 𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 』:** `{duration}`\n **『 𝚂𝚃𝙰𝚃𝚄𝚂 』** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n"
-            + f" **『 𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈 』:** {message.from_user.mention}",
+            caption=f"**『 𝙽𝙰𝙼𝙴 』➮** [{title[:65]}]({url})\n **『 𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 』➮** `{duration}`\n **『 𝚂𝚃𝙰𝚃𝚄𝚂 』➮** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n"
+            + f" **『 𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈 』➮** {message.from_user.mention}",
             reply_markup=keyboard,
         )
         os.remove("final.png")
@@ -838,7 +838,7 @@ async def lol_cb(b, cb):
         await b.send_photo(
             chat_id,
             photo="final.png",
-            caption=f"**『 𝚃𝚁𝙰𝙲𝙺 𝙰𝙳𝙳𝙴𝙳 𝚃𝙾 𝚀𝚄𝙴𝚄𝙴 』 »** `{position}`\n\n **『 𝙽𝙰𝙼𝙴 』** [{title[:35]}...]({url})\n **『 𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 』:** `{duration}`\n **『 𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈 』** {r_by.mention}",
+            caption=f"**『 𝚃𝚁𝙰𝙲𝙺 𝙰𝙳𝙳𝙴𝙳 𝚃𝙾 𝚀𝚄𝙴𝚄𝙴 』 »** `{position}`\n\n **『 𝙽𝙰𝙼𝙴 』➮** [{title[:35]}...]({url})\n **『 𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 』➮** `{duration}`\n **『 𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈 』➮** {r_by.mention}",
             reply_markup=keyboard,
         )
     else:
@@ -863,8 +863,8 @@ async def lol_cb(b, cb):
         await b.send_photo(
             chat_id,
             photo="final.png",
-            caption=f"**『 𝙽𝙰𝙼𝙴 』** [{title[:65]}]({url})\n **『 𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 』:** `{duration}`\n **『 𝚂𝚃𝙰𝚃𝚄𝚂 』:** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n"
-            + f"**『 𝚁𝙴𝚀𝚄𝙴𝚂𝚃𝙴𝙳 𝙱𝚈 』** {r_by.mention}",
+            caption=f"**『 𝙽𝙰𝙼𝙴 』➮** [{title[:65]}]({url})\n **『 𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 』➮** `{duration}`\n **『 𝚂𝚃𝙰𝚃𝚄𝚂 』➮** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n"
+            + f"**『 𝚁𝙴𝚀𝚄𝙴𝚂𝚃𝙴𝙳 𝙱𝚈 』➮** {r_by.mention}",
             reply_markup=keyboard,
         )
     if path.exists("final.png"):
@@ -933,7 +933,7 @@ async def ytplay(_, message: Message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    await lel.edit("🔄 **𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙽𝙶 𝚃𝙾 𝙳𝙰𝚁𝙺 𝚂𝙴𝚁𝚅𝙴𝚁𝚂...**")
+    await lel.edit("➮ **『 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙽𝙶 𝚃𝙾 𝙳𝙰𝚁𝙺 𝚂𝙴𝚁𝚅𝙴𝚁𝚂 』**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -1019,8 +1019,8 @@ async def ytplay(_, message: Message):
         await lel.delete()
         await message.reply_photo(
             photo="final.png",
-            caption=f"**『 𝙽𝙰𝙼𝙴 』:** [{title[:65]}]({url})\n **『 𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 』:** `{duration}`\n **『 𝚂𝚃𝙰𝚃𝚄𝚂 』:** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n"
-            + f"**『 𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈 』:** {message.from_user.mention}",
+            caption=f"**『 𝙽𝙰𝙼𝙴 』➮** [{title[:65]}]({url})\n **『 𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 』➮** `{duration}`\n **『 𝚂𝚃𝙰𝚃𝚄𝚂 』➮** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n"
+            + f"**『 𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈 』➮** {message.from_user.mention}",
             reply_markup=keyboard,
         )
         os.remove("final.png")
