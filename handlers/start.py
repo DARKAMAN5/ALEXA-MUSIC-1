@@ -105,8 +105,15 @@ async def start(client: Client, message: Message):
         ]
     )
 
-    alive = f"**𝙷𝙴𝙻𝙻𝙾 {message.from_user.mention}, i'm {BOT_NAME}**\n\n『 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 』 My Master: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n✨ Bot Version: `v{__version__}`\n🍀 Pyrogram Version: `{pyrover}`\n✨ Python Version: `{__python_version__}`\n🍀 Uptime Status: `{uptime}`\n\n**Thanks for Adding me here, for playing music on your Group voice chat** ❤"
+    alive = f"**𝙷𝙴𝙻𝙻𝙾 {message.from_user.mention}, 𝙸'𝙼 {BOT_NAME}**\n\n『 𝙼𝚈 𝙼𝙰𝚂𝚃𝙴𝚁 』 ➮ [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n
+     『 𝙱𝙾𝚃 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 』➮ `v{__version__}`\n
 
+     『 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 』➮ `{pyrover}`\n
+  
+     『 𝙿𝚈𝚃𝙷𝙾𝙽 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 』➮ `{__python_version__}`\n
+
+     『 𝚄𝙿𝚃𝙸𝙼𝙴  』➮ `{uptime}`\n\n**Thanks for Adding me here, for playing music on your Group voice chat** ❤"
+ 
     await message.reply_photo(
         photo=f"{ALIVE_IMG}",
         caption=alive,
