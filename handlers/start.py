@@ -51,8 +51,7 @@ async def _human_time_duration(seconds):
     command(["start", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
 )
 async def start_(client: Client, message: Message):
-    await message.reply_photo( 
-    photo=f"{ALIVE_IMG}")
+    await message.reply_photo("https://te.legra.ph/file/7503b8232fc07a8324289.jpg")
     await message.reply_text(
         f"""✨ **𝚆𝙴𝙻𝙲𝙾𝙼𝙴 {message.from_user.mention} !**\n
 ✨ **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) Cᴀɴ Pʟᴀʏ Mᴜsɪᴄ Iɴ Yᴏᴜʀ Oᴘ Gʀᴏᴜᴩ Vᴏɪᴄᴇ Cʜᴀᴛ💖. Dᴇᴠᴇʟᴏᴩᴇᴅ Bʏ [𝙳𝙰𝚁𝙺 𝙰𝙼𝙰𝙽](https://t.me/DARKAMAN)!**""",
@@ -119,8 +118,7 @@ async def start(client: Client, message: Message):
 
      **『 𝚄𝙿𝚃𝙸𝙼𝙴  』➮ `{uptime}`**
   
-     **𝚃𝙷𝙰𝙽𝙺𝚂 𝙵𝙾𝚁 𝙰𝙳𝙸𝙽𝙶 𝙼𝙴 𝙷𝙴𝚁𝙴, 𝙵𝙾𝚁 𝙿𝙻𝙰𝚈𝙸𝙽𝙶 𝙼𝚄𝚂𝙸𝙲 𝙾𝙽 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 𝙹𝙾𝙸𝙽 [𝙳𝙰𝚁𝙺 𝚂𝚄𝙿𝙿𝙾𝚁𝚃]("https://t.me//DARKAMANSUPPORT")💖**"
- 
+     **𝚃𝙷𝙰𝙽𝙺𝚂 𝙵𝙾𝚁 𝙰𝙳𝙸𝙽𝙶 𝙼𝙴 𝙷𝙴𝚁𝙴, 𝙵𝙾𝚁 𝙿𝙻𝙰𝚈𝙸𝙽𝙶 𝙼𝚄𝚂𝙸𝙲 𝙾𝙽 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 𝙹𝙾𝙸𝙽 [𝙳𝙰𝚁𝙺 𝚂𝚄𝙿𝙿𝙾𝚁𝚃]("https://t.me//DARKAMANSUPPORT")💖**" 
     await message.reply_photo(
         photo=f"{ALIVE_IMG}",
         caption=alive,
