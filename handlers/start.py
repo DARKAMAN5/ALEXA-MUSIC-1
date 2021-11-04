@@ -51,6 +51,8 @@ async def _human_time_duration(seconds):
     command(["start", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
 )
 async def start_(client: Client, message: Message):
+    await message.reply_photo( 
+    photo=f"{ALIVE_IMG}")
     await message.reply_text(
         f"""✨ **𝚆𝙴𝙻𝙲𝙾𝙼𝙴 {message.from_user.mention} !**\n
 ✨ **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) Cᴀɴ Pʟᴀʏ Mᴜsɪᴄ Iɴ Yᴏᴜʀ Oᴘ Gʀᴏᴜᴩ Vᴏɪᴄᴇ Cʜᴀᴛ💖. Dᴇᴠᴇʟᴏᴩᴇᴅ Bʏ [𝙳𝙰𝚁𝙺 𝙰𝙼𝙰𝙽](https://t.me/DARKAMAN)!**""",
