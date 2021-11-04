@@ -20,11 +20,7 @@ from config import (
 async def cbstart(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""✨ **Welcome [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**\n
-💭 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) allows you to play music on groups through the new Telegram's voice chats!**
-
-💡 **Find out all the Bot's commands and how they work by clicking on the » 📚 Commands button!**
-
-❔ **To know how to use this bot, please click on the » ❓ Basic Guide button!**""",
+💭 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) allows you to play music on groups through the new Telegram's voice chats!**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -85,7 +81,7 @@ async def cbhelp(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbbasic"))
 async def cbbasic(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🏮 **here is the basic commands**
+        f"""**『 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙱𝙰𝚂𝙸𝙲 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 』**
 
 『 𝙶𝚁𝙾𝚄𝙿 𝚅𝙲 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 』
 
@@ -119,7 +115,7 @@ async def cbbasic(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbadvanced"))
 async def cbadvanced(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🏮 **here is the advanced commands**
+        f"""**『 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙰𝙳𝚅𝙰𝙽𝙲𝙴𝚂 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 』**
 
 /start (in group) - see the bot alive status
 /reload - reload bot and refresh the admin list
@@ -137,7 +133,7 @@ async def cbadvanced(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbadmin"))
 async def cbadmin(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🏮 **here is the admin commands**
+        f"""**『 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙰𝙳𝙼𝙸𝙽 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 』**
 
 /player - show the music playing status
 /pause - pause the music streaming
@@ -162,7 +158,7 @@ async def cbadmin(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbsudo"))
 async def cbsudo(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🏮 **here is the sudo commands**
+        f"""**『 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝚂𝚄𝙳𝙾 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 』**
 
 /leaveall - order the assistant to leave from all group
 /stats - show the bot statistic
@@ -180,7 +176,7 @@ async def cbsudo(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbowner"))
 async def cbowner(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🏮 **here is the owner commands**
+        f"""**『 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙾𝚆𝙽𝙴𝚁 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 』**
 
 /stats - show the bot statistic
 /broadcast (reply to message) - send a broadcast message from bot
@@ -188,7 +184,7 @@ async def cbowner(_, query: CallbackQuery):
 /unblock (user id - reason) - unblock user you blocked for using your bot
 /blocklist - show you the list of user was blocked for using your bot
 
-📝 note: all commands owned by this bot can be executed by the owner of the bot without any exceptions.
+📝 note:all commands owned by this bot can be executed by the owner of the bot without any exception𝚂.
 
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
@@ -200,7 +196,7 @@ async def cbowner(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbguide"))
 async def cbguide(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""❓ **HOW TO USE THIS BOT:**
+        f"""**『 𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴 𝚃𝙷𝙸𝚂 𝙱𝙾𝚃 』:**
 
 1.) **first, add me to your group.**
 2.) **then promote me as admin and give all permissions except anonymous admin.**
@@ -226,7 +222,7 @@ async def close(_, query: CallbackQuery):
 @cb_admin_check
 async def cbback(_, query: CallbackQuery):
     await query.edit_message_text(
-        "**『 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙲𝙾𝙽𝚃𝚁𝙾𝙻 𝙼𝙴𝙽𝚄 𝙾𝙵 𝙱𝙾𝚃 :**",
+        "**『 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙲𝙾𝙽𝚃𝚁𝙾𝙻 𝙼𝙴𝙽𝚄 𝙾𝙵 𝙱𝙾𝚃 』:**",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -296,7 +292,7 @@ async def cbhelps(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbhowtouse"))
 async def cbguides(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""❓ **HOW TO USE THIS BOT:**
+        f"""**『 𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴 𝚃𝙷𝙸𝚂 𝙱𝙾𝚃 』:**
 
 1.) **first, add me to your group.**
 2.) **then promote me as admin and give all permissions except anonymous admin.**
@@ -313,7 +309,7 @@ async def cbguides(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cblocal"))
 async def cblocal(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🏮 **here is the basic commands**
+        f"""**『 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙱𝙰𝚂𝙸𝙲 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 』**
 
 『 𝙶𝚁𝙾𝚄𝙿 𝚅𝙲 𝙲𝙼𝙳 』
 
@@ -347,7 +343,7 @@ async def cblocal(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbadven"))
 async def cbadven(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🏮 **here is the advanced commands**
+        f"""**『 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙰𝙳𝚅𝙰𝙽𝙲𝙴𝙳 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 』**
 
 /start (in group) - see the bot alive status
 /reload - reload bot and refresh the admin list
@@ -365,7 +361,7 @@ async def cbadven(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cblamp"))
 async def cblamp(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🏮 **here is the admin commands**
+        f"""**『 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙰𝙳𝙼𝙸𝙽 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 』**
 
 /player - show the music playing status
 /pause - pause the music streaming
@@ -380,7 +376,7 @@ async def cblamp(_, query: CallbackQuery):
 /delcmd (on | off) - enable / disable del cmd feature
 /music (on / off) - disable / enable music player in your group
 
-⚡ __Powered by {BOT_NAME} A.I__""",
+⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("『 𝙱𝙰𝙲𝙺 』", callback_data="cbcmds")]]
         ),
@@ -390,7 +386,7 @@ async def cblamp(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cblab"))
 async def cblab(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🏮 **here is the sudo commands**
+        f"""**『 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝚂𝚄𝙳𝙾 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 』**
 
 /leaveall - order the assistant to leave from all group
 /stats - show the bot statistic
@@ -398,7 +394,7 @@ async def cblab(_, query: CallbackQuery):
 /eval (query) - execute code
 /sh (query) - run code
 
-⚡ __Powered by {BOT_NAME} A.I__""",
+⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("『 𝙱𝙰𝙲𝙺 』", callback_data="cbcmds")]]
         ),
@@ -408,7 +404,7 @@ async def cblab(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbmoon"))
 async def cbmoon(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🏮 **here is the owner commands**
+        f"""**『 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙾𝚆𝙽𝙴𝚁 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 』**
 
 /stats - show the bot statistic
 /broadcast - send a broadcast message from bot
@@ -418,7 +414,7 @@ async def cbmoon(_, query: CallbackQuery):
 
 📝 note: all commands owned by this bot can be executed by the owner of the bot without any exceptions.
 
-⚡ __Powered by {BOT_NAME} A.I__""",
+⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("『 𝙱𝙰𝙲𝙺 』", callback_data="cbcmds")]]
         ),
